@@ -150,7 +150,7 @@ article.page h2 {
 }
 
 /* Clearfix */
-.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix {*zoom: 1; }
 
@@ -253,4 +253,26 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+/* Search */
+div.header-search {
+  float: right;
+}
+
+div.header-search label {
+  position: absolute;
+  left: -9999px;
+}
+div.header-search #searchsubmit {
+  background-color: #006ec3;
+  color: #fff;
+  padding: 5px 14px;
+  border: none;
+  vertical-align: top;
+}
+
+div.header-search #s {
+  vertical-align: top;
+  padding: 3px 0;
 }
