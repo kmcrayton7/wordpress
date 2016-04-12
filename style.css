@@ -50,12 +50,17 @@ article.post:last-of-type {
     border-bottom: none;
 }
 
+article.post:last-of-type {
+    border-bottom: none;
+}
+
 /* Aside Styles */
 article.post-aside,
 article.post-link {
   font-size: 125%;
   background-color: #fff5cb;
-  padding: 20px;
+  padding: 20px 20px 1px 20px;
+  border-bottom: none;
   border-radius: 5px;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
 }
@@ -64,18 +69,28 @@ article.post-link {
   font-size: 68%;
   margin: 0;
   color: #777;
+  display: block;
 }
 
+.mini-meta a {
+    color: #777;
+    text-decoration: none;
+}
 /* Link Post Format Styles */
 article.post-link {
-  padding: 0;
-  background-color: #e0ebff;
+    background-color: #e0ebff;
+    padding: 0;
 }
-
 
 article.post-link a {
   display: block;
+  text-decoration: none;
   padding: 20px;
+}
+
+.post-link-text {
+    line-height: 1.65em;
+    color: #004982;
 }
 
 /* Post Format Gallery Styles */
@@ -83,14 +98,27 @@ article.post-gallery {
    background-color: #222;
    color: #fff;
    padding: 20px;
+   border-bottom: none;
 }
 
-article.post-gallery img {
+article.post-gallery .gallery img {
    border: none!important;
+}
+
+article.post-gallery .wp-caption-text {
+    font-size: 86%;
 }
 
 article.post-gallery h2 {
    text-align: center;
+}
+
+article.post-gallery h2 a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 130%;
+   text-transform: uppercase;
+   letter-spacing: 2px;
 }
 
 /* Header */
@@ -163,8 +191,63 @@ article.post-gallery h2 {
     color: #fff;
 }
 
+/* Main Column */
+.main-column {
+    width: 66%;
+    float: left;
+}
+
+/* Side Column */
+.side-column {
+    width: 30%;
+    float: right;
+}
+
+.side-column .widget-item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+h2.widget-title {
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 138%;
+}
+
+.widget-item ul {
+    margin: 0;
+    padding: 0;
+}
+
+.widget-item ul li {
+    list-style-position: inside;
+    line-height: 1.65em;
+}
+
+.widget-item p:last-child {
+    margin: 0;
+}
+
+/* Footer Widget Area */
+.footer-widgets {
+    padding-top: 40px;
+    margin-right: -40px;
+}
+
+.footer-widget-area {
+    width: 25%;
+    float: left;
+    box-sizing: border-box;
+    padding-right: 40px;
+}
+
 /* Footer*/
 .site-footer {
+    overflow: hidden;
     margin-top: 30px;
     border-top: 1px solid #ddd;
     font-size: 84%;
@@ -178,7 +261,7 @@ article.post-gallery h2 {
 .site-footer nav ul li {
     margin-right: 10px;
     padding-right: 10px;
-    border-right: 1px dotted #ddd;
+    border-right: 1px solid #ddd;
 }
 
 .site-footer nav ul li:last-of-type {
@@ -287,14 +370,14 @@ img {
 }
 
 .has-thumbnail {
-  position: relative;
-  padding-left: 200px;
+    position: relative;
+    padding-left: 200px;
 }
 
 .post-thumbnail {
-  position: absolute;
-  top: 0;
-  left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* Search */

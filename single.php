@@ -1,22 +1,32 @@
 <?php
 
-get_header();
+get_header(); ?>
 
-if (have_posts() ) :
-    while ( have_posts() ) : the_post();
-    if (get_post_format() == false) {
-      get_template_part("content", "single");
-   } else {
-         get_template_part("content", get_post_format());
-   }
+    <!-- site-content -->
+    <div class="site-content clearfix">
 
-    endwhile;
+        <!-- main-colmun -->
+        <div class="main-column">
+            <?php if (have_posts() ) :
+                while ( have_posts() ) : the_post();
+                if (get_post_format() == false) {
+                  get_template_part("content", "single");
+               } else {
+                     get_template_part("content", get_post_format());
+               }
+                endwhile;
 
-    else :
-      echo '<p>No content found</p>';
+                else :
+                  echo '<p>No content found</p>';
 
-   endif;
-   
-get_footer();
+               endif;
+               ?>
+        </div>
+
+        <?php get_sidebar(); ?>
+
+    </div>
+
+<?php get_footer();
 
 ?>

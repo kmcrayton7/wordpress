@@ -29,14 +29,14 @@
         <?php if (is_search() OR is_archive() ) { ?>
           <p>
             <?php echo get_the_excerpt(); ?>
-            <a href="<?php the_permalink(); ?>">Continue reading &raquo;</a>
+            <a href="<?php the_permalink(); ?>">Continue reading&raquo;</a>
           </p>
 
       <?php  } else {
         if ($post->post_excerpt) { ?>
             <p>
               <?php echo get_the_excerpt(); ?>
-              <a href="<?php the_permalink(); ?>">Continue reading &raquo;</a>
+              <a href="<?php the_permalink(); ?>">Continue reading&raquo;</a>
             </p>
           <?php } else {
 
@@ -44,6 +44,4 @@
 
           }
         } ?>
-
-
-        </article>
+</article>
