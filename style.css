@@ -219,6 +219,7 @@ article.post-gallery h2 a {
 
 .size-square-thumbnail {
     width: 80px;
+    height: 80px;
 }
 .home-columns .post-item:last-of-type {
     border-bottom: none;
